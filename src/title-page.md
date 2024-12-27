@@ -1,47 +1,47 @@
-# The Rust Programming Language
+# A Rust programozási nyelv
 
-*by Steve Klabnik and Carol Nichols, with contributions from the Rust Community*
+*írta Steve Klabnik és Carol Nichols, a Rust közösség közreműködésével*
 
-This version of the text assumes you’re using Rust 1.37.0 or later with
-`edition="2018"` in *Cargo.toml* of all projects to use Rust 2018 Edition
-idioms. See the [“Installation” section of Chapter 1][install]<!-- ignore -->
-to install or update Rust, and see the new [Appendix E][editions]<!-- ignore
---> for information on editions.
+A szöveg ezen verziója feltételezi, hogy Rust 1.37.0 vagy újabb verziót használsz
+`edition="2018"` beállítással minden projekt *Cargo.toml* fájljában a Rust 2018 Edition
+idiómák használatához. Tekintsd meg az ["1. fejezet Telepítés" szakaszát][install]<!-- ignore -->
+a Rust telepítéséhez vagy frissítéséhez, és nézd meg az új [E függeléket][editions]<!-- ignore -->
+az edíciókkal kapcsolatos információkért.
 
-The 2018 Edition of the Rust language includes a number of improvements that
-make Rust more ergonomic and easier to learn. This iteration of the book
-contains a number of changes to reflect those improvements:
+A Rust nyelv 2018-as kiadása számos olyan fejlesztést tartalmaz, amelyek
+ergonomikusabbá és könnyebben tanulhatóvá teszik a Rust-ot. A könyv ezen változata
+számos módosítást tartalmaz, hogy tükrözze ezeket a fejlesztéseket:
 
-- Chapter 7, “Managing Growing Projects with Packages, Crates, and Modules,”
-  has been mostly rewritten. The module system and the way paths work in the
-  2018 Edition were made more consistent.
-- Chapter 10 has new sections titled “Traits as Parameters” and “Returning
-  Types that Implement Traits” that explain the new `impl Trait` syntax.
-- Chapter 11 has a new section titled “Using `Result<T, E>` in Tests” that
-  shows how to write tests that use the `?` operator.
-- The “Advanced Lifetimes” section in Chapter 19 was removed because compiler
-  improvements have made the constructs in that section even rarer.
-- The previous Appendix D, “Macros,” has been expanded to include procedural
-  macros and was moved to the “Macros” section in Chapter 19.
-- Appendix A, “Keywords,” also explains the new raw identifiers feature that
-  enables code written in the 2015 Edition and the 2018 Edition to interoperate.
-- Appendix D is now titled “Useful Development Tools” and covers recently
-  released tools that help you write Rust code.
-- We fixed a number of small errors and imprecise wording throughout the book.
-  Thank you to the readers who reported them!
+- A 7. fejezet, "Növekvő projektek kezelése csomagokkal, ládákkal és modulokkal"
+  nagyrészt át lett írva. A modulrendszer és az elérési utak működése a
+  2018-as kiadásban konzisztensebbé vált.
+- A 10. fejezet új szakaszokat tartalmaz "Jellemvonások mint paraméterek" és "Jellemvonásokat
+  implementáló típusok visszaadása" címmel, amelyek elmagyarázzák az új `impl Trait` szintaxist.
+- A 11. fejezet egy új szakaszt tartalmaz "A `Result<T, E>` használata tesztekben" címmel,
+  amely bemutatja, hogyan írhatunk teszteket a `?` operátor használatával.
+- A "Haladó élettartamok" szakasz a 19. fejezetből eltávolításra került, mivel a fordítóprogram
+  fejlesztései még ritkábbá tették az abban a szakaszban tárgyalt szerkezeteket.
+- A korábbi D függelék, "Makrók", ki lett bővítve procedurális makrókkal és
+  átkerült a 19. fejezet "Makrók" szakaszába.
+- Az A függelék, "Kulcsszavak", elmagyarázza az új nyers azonosítók funkcióját is,
+  amely lehetővé teszi a 2015-ös és 2018-as kiadásban írt kód együttműködését.
+- A D függelék most "Hasznos fejlesztőeszközök" címet viseli, és a közelmúltban
+  megjelent eszközöket tárgyalja, amelyek segítenek a Rust kód írásában.
+- Számos kisebb hibát és pontatlan megfogalmazást javítottunk a könyvben.
+  Köszönjük az olvasóknak, akik jelezték ezeket!
 
-Note that any code in earlier iterations of *The Rust Programming Language*
-that compiled will continue to compile without `edition="2018"` in the
-project’s *Cargo.toml*, even as you update the Rust compiler version you’re
-using. That’s Rust’s backward compatibility guarantees at work!
+Megjegyzendő, hogy *A Rust programozási nyelv* korábbi verzióiban szereplő kódok
+továbbra is fordíthatók maradnak `edition="2018"` nélkül a projekt
+*Cargo.toml* fájljában, még akkor is, ha frissíted a használt Rust fordítót.
+Ez a Rust visszafelé kompatibilitási garanciájának köszönhető!
 
-The HTML format is available online at
+A HTML formátum online elérhető a
 [https://doc.rust-lang.org/stable/book/](https://doc.rust-lang.org/stable/book/)
-and offline with installations of Rust made with `rustup`; run `rustup docs
---book` to open.
+címen és offline a `rustup`-pal telepített Rust verzióknál; futtasd a `rustup docs
+--book` parancsot a megnyitáshoz.
 
-This text is available in [paperback and ebook format from No Starch
-Press][nsprust].
+Ez a szöveg elérhető [papírkötésű és e-book formátumban a No Starch
+Press kiadónál][nsprust].
 
 [install]: ch01-01-installation.html
 [editions]: appendix-05-editions.html
